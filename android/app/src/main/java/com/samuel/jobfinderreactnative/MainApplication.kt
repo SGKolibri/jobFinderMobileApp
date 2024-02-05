@@ -1,4 +1,4 @@
-package com.anonymous.jobfinderreactnative
+package com.samuel.jobfinderreactnative
 
 import android.app.Application
 import android.content.res.Configuration

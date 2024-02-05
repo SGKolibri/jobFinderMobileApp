@@ -1,4 +1,4 @@
-package com.anonymous.jobfinderreactnative
+package com.samuel.jobfinderreactnative
 
 import android.os.Build
 import android.os.Bundle

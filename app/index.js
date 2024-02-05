@@ -5,16 +5,17 @@ import { Stack, useRouter } from 'expo-router'
 import { COLORS, icons, images, SIZES } from '../constants'
 import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome, } from '../components'
 
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
 import * as AuthSession from 'expo-auth-session';
 
-
+WebBrowser.maybeCompleteAuthSession();
 
 export default function Home() {
 
     const router = useRouter()
 
-    
-
+    const [searchTerm, setSearchTerm] = useState('')
     return (
         <>
             <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -34,7 +35,15 @@ export default function Home() {
                 />
                 <ScrollView showsHorizontalScrollIndicator={true} >
                     <View style={{ flex: 1, padding: SIZES.medium }}>
-                        <Welcome />
+                        <Welcome
+                            searchTerm={searchTerm}
+                            setSearchTerm={setSearchTerm}
+                            handleClick={() => {
+                                if (searchTerm) {
+                                    router.push(`/search/${searchTerm}`)
+                                }
+                            }}
+                        />
                         <Popularjobs />
                         <Nearbyjobs />
                     </View>

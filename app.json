@@ -16,14 +16,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.samuel.jobfinderreactnative"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.jobfinderreactnative"
+      "package": "com.samuel.jobfinderreactnative"
     },
     "web": {
       "bundler": "metro",
