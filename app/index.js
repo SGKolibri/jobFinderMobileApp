@@ -16,9 +16,10 @@ export default function Home() {
     const router = useRouter()
 
     const [searchTerm, setSearchTerm] = useState('')
+
     return (
         <>
-            <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: COLORS }}>
                 <Stack.Screen
                     options={{
                         headerTitle: '',
@@ -48,7 +49,6 @@ export default function Home() {
                     </View>
                 </ScrollView>
             </SafeAreaView>
-
         </>
     )
 }
