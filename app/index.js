@@ -29,8 +29,7 @@ export default function Home() {
                         ),
                         headerRight: () => (
                             <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
-                        ),
-
+                        )
                     }}
                 />
                 <ScrollView showsHorizontalScrollIndicator={true} >
@@ -49,6 +48,7 @@ export default function Home() {
                     </View>
                 </ScrollView>
             </SafeAreaView>
+
         </>
     )
 }
