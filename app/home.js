@@ -7,8 +7,7 @@ import {
   Nearbyjobs,
   Popularjobs,
   ScreenHeaderBtn,
-  Welcome,
-  Sidebar
+  Welcome
 } from "../components";
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar open={openSidebar} setOpen={setOpenSidebar} />
       <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
         <Stack.Screen
           options={{
