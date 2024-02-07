@@ -1,30 +1,27 @@
-import React, { useState } from 'react'
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
-import { useRouter } from 'expo-router'
-import { icons, SIZES } from '../../../constants'
+import { useState } from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  FlatList,
+} from "react-native";
+import { useRouter } from "expo-router";
 
-import styles from './welcome.style'
+import styles from "./welcome.style";
+import { icons, SIZES } from "../../../constants";
 
-// const jobTypes = {
-//   'Tempo-integral': 'Full-time',
-//   'Meio-período': 'Part-time',
-//   'Contrato': 'Contractor',
-// }
-
-const jobTypes = ["Tempo-integral", "Part-time", "Contractor"];
-
-const FormatJobType = (jobType) => {
-  return jobType.toLowerCase().split('-').join('').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-}
+const jobTypes = ["Full-time", "Part-time", "Freelancer"];
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
-  const [activeJobType, setActiveJobType] = useState("Tempo-integral");
+  const [activeJobType, setActiveJobType] = useState("Full-time");
 
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Olá Samuel.</Text>
+        <Text style={styles.userName}>Olá Samuel</Text>
         <Text style={styles.welcomeMessage}>Encontre seu trabalho dos sonhos!</Text>
       </View>
 
@@ -39,7 +36,6 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         </View>
 
         <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
-
           <Image
             source={icons.search}
             resizeMode='contain'
@@ -71,4 +67,4 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   );
 };
 
-export default Welcome
+export default Welcome;

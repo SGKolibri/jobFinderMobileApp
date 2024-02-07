@@ -1,6 +1,6 @@
-import { View, Text } from "react-native"
+import { View, Text } from "react-native";
 
-import styles from "./specifics.style"
+import styles from "./specifics.style";
 
 const Specifics = ({ title, points }) => {
   return (
@@ -16,7 +16,7 @@ const Specifics = ({ title, points }) => {
         ))}
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Specifics
+export default Specifics;

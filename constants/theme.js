@@ -1,5 +1,5 @@
 const COLORS = {
-  primary: "#291e47",
+  primary: "#312651",
   secondary: "#444262",
   tertiary: "#FF7754",
 
@@ -8,13 +8,13 @@ const COLORS = {
 
   white: "#F3F4F8",
   lightWhite: "#FAFAFC",
-}
+};
 
 const FONT = {
   regular: "DMRegular",
   medium: "DMMedium",
   bold: "DMBold",
-}
+};
 
 const SIZES = {
   xSmall: 10,
@@ -23,7 +23,7 @@ const SIZES = {
   large: 20,
   xLarge: 24,
   xxLarge: 32,
-}
+};
 
 const SHADOWS = {
   small: {
@@ -46,6 +46,6 @@ const SHADOWS = {
     shadowRadius: 5.84,
     elevation: 5,
   },
-}
+};
 
-export { COLORS, FONT, SIZES, SHADOWS }
+export { COLORS, FONT, SIZES, SHADOWS };

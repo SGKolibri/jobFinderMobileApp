@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
 
-import { COLORS, SHADOWS, SIZES } from "../../../../constants"
+import { COLORS, SHADOWS, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     marginTop: 3,
     textTransform: "capitalize",
   },
-})
+});
 
-export default styles
+export default styles;

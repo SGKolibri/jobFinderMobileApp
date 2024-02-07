@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
 
-import { FONT, SIZES, COLORS } from "../../../constants"
+import { FONT, SIZES, COLORS } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
   cardsContainer: {
     marginTop: SIZES.medium,
   },
-})
+});
 
-export default styles
+export default styles;

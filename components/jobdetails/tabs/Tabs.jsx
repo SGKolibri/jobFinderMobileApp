@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { TouchableOpacity, FlatList, Text, View } from "react-native"
+import React, { useState } from "react";
+import { TouchableOpacity, FlatList, Text, View } from "react-native";
 
-import styles from "./tabs.style"
-import { SIZES } from "../../../constants"
+import styles from "./tabs.style";
+import { SIZES } from "../../../constants";
 
 function TabButton({ name, activeTab, onHandleSearchType }) {
   return (
@@ -12,7 +12,7 @@ function TabButton({ name, activeTab, onHandleSearchType }) {
     >
       <Text style={styles.btnText(name, activeTab)}>{name}</Text>
     </TouchableOpacity>
-  )
+  );
 }
 
 const Tabs = ({ tabs, activeTab, setActiveTab }) => {
@@ -33,7 +33,7 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
         keyExtractor={(item) => item}
       />
     </View>
-  )
-}
+  );
+};
 
-export default Tabs
+export default Tabs;

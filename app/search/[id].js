@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, Image, TouchableOpacity, View } from 'react-native'
-import { Stack, useRouter, useLocalSearchParams } from 'expo-router'
+import { Stack, useRouter, useSearchParams } from 'expo-router'
 import { Text, SafeAreaView } from 'react-native'
 import axios from 'axios'
 
@@ -9,13 +9,15 @@ import { COLORS, icons, SIZES } from '../../constants'
 import styles from '../../styles/search'
 
 const JobSearch = () => {
-    const params = useLocalSearchParams();
+    const params = useSearchParams();
     const router = useRouter()
 
     const [searchResult, setSearchResult] = useState([]);
     const [searchLoader, setSearchLoader] = useState(false);
     const [searchError, setSearchError] = useState(null);
     const [page, setPage] = useState(1);
+
+    if (searchError) console.log("error: ", searchError)
 
     const handleSearch = async () => {
         setSearchLoader(true);
@@ -24,7 +26,7 @@ const JobSearch = () => {
         try {
             const options = {
                 method: "GET",
-                url: `https://jsearch.p.rapidapi.com/search`,
+                url: 'https://jsearch.p.rapidapi.com/search',
                 headers: {
                     "X-RapidAPI-Key": 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bkzuUzVLzA',
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
@@ -90,13 +92,13 @@ const JobSearch = () => {
                     <>
                         <View style={styles.container}>
                             <Text style={styles.searchTitle}>{params.id}</Text>
-                            <Text style={styles.noOfSearchedJobs}>Oportunidades de trabalho</Text>
+                            <Text style={styles.noOfSearchedJobs}>Propostas de emprego</Text>
                         </View>
                         <View style={styles.loaderContainer}>
                             {searchLoader ? (
                                 <ActivityIndicator size='large' color={COLORS.primary} />
                             ) : searchError && (
-                                <Text>Erro</Text>
+                                <Text>Algo de errado ocorreu! </Text>
                             )}
                         </View>
                     </>
