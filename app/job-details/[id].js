@@ -20,7 +20,7 @@ import {
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
-const tabs = ["About", "Qualifications", "Responsibilities"];
+const tabs = ["Sobre", "Qualificações", "Responsabilidades"];
 
 const JobDetails = () => {
   const params = useLocalSearchParams();
@@ -42,23 +42,23 @@ const JobDetails = () => {
 
   const displayTabContent = () => {
     switch (activeTab) {
-      case "Qualifications":
+      case "Qualificações":
         return (
           <Specifics
-            title='Qualifications'
+            title='Qualificações'
             points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
           />
         );
 
-      case "About":
+      case "Sobre":
         return (
           <JobAbout info={data[0].job_description ?? "No data provided"} />
         );
 
-      case "Responsibilities":
+      case "Responsabilidades":
         return (
           <Specifics
-            title='Responsibilities'
+            title='Responsabilidades'
             points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
           />
         );

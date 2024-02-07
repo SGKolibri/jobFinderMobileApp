@@ -18,6 +18,8 @@
     "android": {
       "package": "com.samuelcustodio.jobfinder"
     },
-    "ios": {}
+    "ios": {
+      "bundleIdentifier": "com.samuelcustodio.jobfinder"
+    }
   }
 }
