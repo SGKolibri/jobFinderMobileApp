@@ -18,7 +18,9 @@
     "updates": {
       "url": "https://u.expo.dev/6c2d548f-5975-4940-ac0b-afcb3dd88b50"
     },
-    "android": {},
+    "android": {
+      "package": "com.samuelcustodio.jobfinder"
+    },
     "ios": {}
   }
 }
