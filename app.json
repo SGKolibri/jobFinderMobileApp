@@ -5,6 +5,12 @@
       "bundler": "metro"
     },
     "name": "Job Finder",
-    "slug": "Job Finder"
+    "slug": "job-finder-project",
+    "extra": {
+      "eas": {
+        "projectId": "6c2d548f-5975-4940-ac0b-afcb3dd88b50"
+      }
+    },
+    "owner": "samuelcustodio"
   }
 }
