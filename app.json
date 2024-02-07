@@ -1,9 +1,6 @@
 {
   "expo": {
     "scheme": "acme",
-    "web": {
-      "bundler": "metro"
-    },
     "name": "Job Finder",
     "slug": "job-finder-project",
     "extra": {
